@@ -9,5 +9,3 @@ class DogAdoption::Scraper
   end
 
 end
-
-#https://bestfriends.org/adopt/adopt-our-sanctuary/dogs
