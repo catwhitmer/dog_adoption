@@ -4,7 +4,6 @@ class DogAdoption::CLI
     puts "Welcome to Cat's Dog Adoption!"
     dog_list
     dogs
-    
   end
   
   def dog_list

@@ -1,5 +1,5 @@
 class DogAdoption::Dogs 
-  attr_accessor :name, :breed, :age, :size, :color, :gender :url 
+  attr_accessor :name, :breed, :age, :size, :color, :gender, :url 
   
   @@all = []
   
