@@ -18,17 +18,4 @@ class DogAdoption::Dogs
     @@all 
   end
   
-  def self.create_dog
-    dog = self.new
-    dog.name = 
-    dog.breed =
-    dog.age =
-    dog.size = 
-    dog.color = 
-    dog.gender =
-    dog.url = https://bestfriends.org/adopt/adopt-our-sanctuary/dogs
-    #array of dogs
-  end
-  
 end
-
