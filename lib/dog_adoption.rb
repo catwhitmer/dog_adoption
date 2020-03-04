@@ -1,6 +1,10 @@
-require "dog_adoption/version"
+#environment file 
+require 'nokogiri'
+require 'open-uri'
+require 'pry'
 
-module DogAdoption
-  class Error < StandardError; end
-  # Your code goes here...
-end
+
+require_relative "dog_adoption/version"
+require_relative "dog_adoption/cli"
+require_relative "dog_adoption/scraper"
+require_relative "dog_adoption/dogs"
