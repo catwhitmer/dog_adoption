@@ -5,29 +5,29 @@ class DogAdoption::CLI
     puts "Welcome to Cat's Dog Adoption!"
     puts "\nFor a list of dogs available, type list."
     puts "To leave anytime, type exit."
-    dogs
+    dog_menu
   end
   
-  def dogs 
-    input = gets.strip.downcase
+  def dog_menu 
+    input = nil 
+    while input != "exit"
+      input = gets.strip.downcase
       case input
-      when "list"
-        dog_objects
-        list_dogs
-        puts dogs[0].name
-        puts dogs[0].url
-      when "exit"
-        puts "Goodbye"
-      else 
-        puts "Whoof was that? Please type list or exit."
-      end
+        when "list"
+          dog_objects
+          list_dogs
+        when "exit"
+          puts "Goodbye"
+     else 
+       puts "Whoof was that? Please type list or exit."
+       dog_menu
+     end
+    end
    end
    
    def list_dogs
-     dogs = DogAdoption::all
-       puts "\nPlease enter the number of the dog you would like more information about:"
-       dogs.each.with_index(0) do |dogs, index|
-         puts "#{index}. #{dogs.name}"
+     DogAdoption::Dogs.all.each.with_index(1) do |dog, index|
+         puts "#{index}. #{dog.name}"
        end
    end
    
