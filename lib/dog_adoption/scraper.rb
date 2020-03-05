@@ -10,7 +10,7 @@ class DogAdoption::Scraper
     
       
     dogs_array.map.with_index[0] do |dog|
-       name = page.css("h2.heading-2").text.strip
+      name = page.css("h2.heading-2").text.strip
       breed =
       age =
       gender =
@@ -25,8 +25,5 @@ class DogAdoption::Scraper
       }
        dogs << dogs_info
   end
-   dogs 
-  
  end
- 
 end
