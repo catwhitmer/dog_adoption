@@ -3,13 +3,13 @@ class DogAdoption::Dogs
   
   @@all = []
   
-  def initialize(name)
+  def initialize(name,url)
     @name = name 
     @age = age
     @breed = breed
     @gender = gender
     @description = description
-    @url = url 
+    @url = "https://bestfriends.org" + url 
     @@all << self 
   end
   

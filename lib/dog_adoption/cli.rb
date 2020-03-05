@@ -40,4 +40,9 @@ class DogAdoption::CLI
      url = "https://bestfriends.org/adopt/adopt-our-sanctuary/dogs"
         DogAdoption::Scraper.scrape_dogs(url)
    end
+   
+   def dog_details(details)
+     details = DogAdoption::Scraper.all
+     DogAdoption::Scraper.scrape_dog_details(details)
+   end
 end
