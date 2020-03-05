@@ -6,8 +6,7 @@ class DogAdoption::Scraper
     array_dogs = doc.css("div.rg-animal")
     
     array_dogs.map do |dog|
-      binding.pry
-      DogAdoption::Dogs.new(dog.text, first_element_child["href"])
+      DogAdoption::Dogs.new(dog.text, dog.first_element_child["href"])
     end
   end
 end

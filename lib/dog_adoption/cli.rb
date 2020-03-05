@@ -22,7 +22,8 @@ class DogAdoption::CLI
       when "list"
         url = "https://bestfriends.org/adopt/adopt-our-sanctuary/dogs"
         dogs = DogAdoption::Scraper.scrape_dogs(url)
-        puts dogs[0]
+        puts dogs[0].name
+        puts dogs[0].url
       when "exit"
         puts "Goodbye"
       else 

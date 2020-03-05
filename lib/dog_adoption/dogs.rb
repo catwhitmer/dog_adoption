@@ -8,7 +8,7 @@ class DogAdoption::Dogs
     @age = age
     @gender = gender
     @description = description
-    @url = url 
+    @url = "https://bestfriends.org" + url 
     @@all << self 
     @dogs = []
   end
