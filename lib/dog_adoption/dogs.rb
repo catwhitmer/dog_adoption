@@ -10,7 +10,6 @@ class DogAdoption::Dogs
     @description = description
     @url = "https://bestfriends.org" + url 
     @@all << self 
-    @dogs = []
   end
   
   def self.all 

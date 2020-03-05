@@ -8,20 +8,12 @@ class DogAdoption::CLI
     dogs
   end
   
-  def dog_list
-    dogs.map.with_index[0] do |name, index|
-      name = name.text
-      index
-    end
-  end
-  
   def dogs 
-    puts "\nPlease enter the number of the dog you would like more information about:"
-      input = gets.strip.downcase
+    input = gets.strip.downcase
       case input
       when "list"
-        url = "https://bestfriends.org/adopt/adopt-our-sanctuary/dogs"
-        dogs = DogAdoption::Scraper.scrape_dogs(url)
+        dog_objects
+        list_dogs
         puts dogs[0].name
         puts dogs[0].url
       when "exit"
@@ -29,5 +21,18 @@ class DogAdoption::CLI
       else 
         puts "Whoof was that? Please type list or exit."
       end
+   end
+   
+   def list_dogs
+     dogs = DogAdoption::all
+       puts "\nPlease enter the number of the dog you would like more information about:"
+       dogs.each.with_index(0) do |dogs, index|
+         puts "#{index}. #{dogs.name}"
+       end
+   end
+   
+   def dog_objects
+     url = "https://bestfriends.org/adopt/adopt-our-sanctuary/dogs"
+        DogAdoption::Scraper.scrape_dogs(url)
    end
 end
