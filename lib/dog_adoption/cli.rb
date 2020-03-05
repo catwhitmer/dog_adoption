@@ -2,37 +2,32 @@ class DogAdoption::CLI
   
   def start 
     puts "Welcome to Cat's Dog Adoption!"
-    dog_list
+    puts "\nFor a list of dogs available, type list."
+    puts "To leave anytime, type exit."
     dogs
   end
   
   def dog_list
-    #get dog list from scraping
-    #return array of dogs
-    puts "For a list of dogs available, type list."
-    puts "These are the dogs available today."
+    dogs.map.with_index[0] do |name, index|
+      name = name.text
+      index
+    end
   end
   
   def dogs 
     input = nil 
     while input != "exit"
-      puts "Please enter the number of the dog you would like more information about:"
-      puts "To leave anytime, type exit."
+      puts "\nPlease enter the number of the dog you would like more information about:"
+      
       input = gets.strip.downcase
       case input
-      when "1"
-        puts "more info on 1"
-      when "2"
-        puts "more info on 2"
       when "list"
-        dog_list
+        DogAdoption::Scraper.scrape_dogs(url)
       when "exit"
         puts "Goodbye"
       else 
         puts "Whoof was that? Please type list or exit."
       end
     end
-
-  end
-  
+   end
 end

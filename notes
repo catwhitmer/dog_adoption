@@ -6,3 +6,6 @@ dog
 4. size
 5. color
 6. gender
+
+create Dog.new
+array of all dog names

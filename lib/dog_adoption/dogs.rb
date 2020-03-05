@@ -11,6 +11,7 @@ class DogAdoption::Dogs
     @description = description
     @url = url 
     @@all << self 
+    @dogs = []
   end
   
   def self.all 
