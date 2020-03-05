@@ -18,11 +18,12 @@ class DogAdoption::CLI
     input = nil 
     while input != "exit"
       puts "\nPlease enter the number of the dog you would like more information about:"
-      
       input = gets.strip.downcase
       case input
       when "list"
-        DogAdoption::Scraper.scrape_dogs(url)
+        url = "https://bestfriends.org/adopt/adopt-our-sanctuary/dogs"
+        dogs = DogAdoption::Scraper.scrape_dogs(url)
+        puts dogs[0]
       when "exit"
         puts "Goodbye"
       else 
