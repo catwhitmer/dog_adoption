@@ -1,28 +1,32 @@
 class DogAdoption::Scraper 
   
   def self.scrape(url)
-    page = Nokogiri::HTML(open(url))
-    binding.pry
+    doc = Nokogiri::HTML(open(url))
     url = "https://bestfriends.org/adopt/adopt-our-sanctuary/dogs"
-    page.css("")
+    page.css("span.animalName")
+    
+    dogs = []
     
     
+      
     dogs_array.map.with_index[0] do |dog|
-      puts "#{name}" 
-    end 
+       name = page.css("h2.heading-2").text.strip
+      breed =
+      age =
+      gender =
+      description =
+      dogs_info = 
+      {
+        name: name,
+        breed: breed,
+        age: age,
+        gender: gender,
+        description: description
+      }
+       dogs << dogs_info
   end
+   dogs 
   
-  def self.scrape_dog
-    dogs_array = []
-    dog = self.new
-    #dog.name = 
-    #dog.breed =
-    #dog.age =
-    #dog.size = 
-    #dog.color = 
-    #dog.gender =
-    #dog.url = 
-    #array of dogs
-  end
-
+ end
+ 
 end

@@ -29,7 +29,7 @@ class DogAdoption::CLI
       when "exit"
         puts "Goodbye"
       else 
-        puts "Whoof was that?"
+        puts "Whoof was that? Please type list or exit."
       end
     end
 
