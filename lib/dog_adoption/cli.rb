@@ -1,3 +1,4 @@
+
 class DogAdoption::CLI 
   
   def start 
@@ -15,9 +16,7 @@ class DogAdoption::CLI
   end
   
   def dogs 
-    input = nil 
-    while input != "exit"
-      puts "\nPlease enter the number of the dog you would like more information about:"
+    puts "\nPlease enter the number of the dog you would like more information about:"
       input = gets.strip.downcase
       case input
       when "list"
@@ -29,6 +28,5 @@ class DogAdoption::CLI
       else 
         puts "Whoof was that? Please type list or exit."
       end
-    end
    end
 end

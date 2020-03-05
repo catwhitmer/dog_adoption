@@ -1,11 +1,10 @@
 class DogAdoption::Dogs 
-  attr_accessor :name, :breed, :age, :gender, :description, :url 
+  attr_accessor :name, :age, :gender, :description, :url 
   
   @@all = []
   
   def initialize(name, url)
     @name = name 
-    @breed = breed
     @age = age
     @gender = gender
     @description = description
