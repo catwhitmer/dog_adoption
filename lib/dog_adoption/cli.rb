@@ -21,7 +21,6 @@ class DogAdoption::CLI
           puts "Goodbye"
      else 
        puts "Whoof was that? Please type list or exit."
-       dog_menu
      end
     end
    end
@@ -29,12 +28,12 @@ class DogAdoption::CLI
    def list_dogs
      DogAdoption::Dogs.all.each.with_index(1) do |dog, index|
          puts "#{index}. #{dog.name}"
-         input = gets.strip.to_i
+         #input = gets.strip.to_i
        end
    end
    
    def choose_dog
-     puts "\nPlease chhose the number of the dog you would like more information about:"
+     puts "\nPlease choose the number of the dog you would like more information about:"
    end
    
    def dog_objects
