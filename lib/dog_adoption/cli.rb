@@ -48,5 +48,7 @@ class DogAdoption::CLI
    
    def dog_details(details)
      DogAdoption::Scraper.scrape_dogs_details(details)
+     @dog_description
+     puts "\nTo see the list again, press list"
    end
 end
