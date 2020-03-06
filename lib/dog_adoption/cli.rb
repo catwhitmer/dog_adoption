@@ -28,14 +28,15 @@ class DogAdoption::CLI
    def list_dogs
      DogAdoption::Dogs.all.each.with_index(1) do |dog, index|
          puts "#{index}. #{dog.name}"
-         details = DogAdoption::Dogs.all
-         dog_details(details)
-         #input = gets.strip.to_i
-       end
+     end
    end
    
    def choose_dog
      puts "\nPlease choose the number of the dog you would like more information about:"
+     input = gets.strip.to_i
+     
+     details = DogAdoption::Dogs.all
+         dog_details(details)
    end
    
    def dog_objects
@@ -44,7 +45,7 @@ class DogAdoption::CLI
    end
    
    def dog_details(details)
-      binding.pry
-     DogAdoption::Scraper.scrape_dogs_details(details)
+     binding.pry
+     #DogAdoption::Scraper.scrape_dogs_details(details)
    end
 end

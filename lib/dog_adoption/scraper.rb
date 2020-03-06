@@ -10,14 +10,5 @@ class DogAdoption::Scraper
     end
   end
   
-  def self.scrape_dogs_details(details)
-    doc = Nokogiri::HTML(open(details.url))
-    binding.pry 
-    name = doc.css("h2.heading-2").text.strip
-    breed = doc.css("")
-    age = doc.css("")
-    gender = doc.css("")
-    description = doc.css("")
-    
-  end
+  
 end
