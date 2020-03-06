@@ -39,6 +39,7 @@ class DogAdoption::CLI
        details = DogAdoption::Dogs.all[input-1]
       dog_details(details)
      end
+     dog_menu_two
     end
    
    def dog_objects
@@ -49,6 +50,10 @@ class DogAdoption::CLI
    def dog_details(details)
      DogAdoption::Scraper.scrape_dogs_details(details)
      @dog_description
-     puts "\nTo see the list again, press list"
+   end
+   
+   def dog_menu_two
+     puts "\nIf you would like to see the list again, press list."
+     puts "To exit,type exit."
    end
 end
