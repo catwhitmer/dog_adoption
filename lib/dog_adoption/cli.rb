@@ -47,7 +47,6 @@ class DogAdoption::CLI
    end
    
    def dog_details(details)
-     binding.pry
-     #DogAdoption::Scraper.scrape_dogs_details(details)
+     DogAdoption::Scraper.scrape_dogs_details(details)
    end
 end
