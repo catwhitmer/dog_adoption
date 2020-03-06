@@ -34,10 +34,12 @@ class DogAdoption::CLI
    def choose_dog
      puts "\nPlease choose the number of the dog you would like more information about:"
      input = gets.strip.to_i
-     
-     details = DogAdoption::Dogs.all
-         dog_details(details)
-   end
+     max_length = DogAdoption::Dogs.all.length
+     if input.between?(1, max_length)
+       details = DogAdoption::Dogs.all[input-1]
+      dog_details(details)
+     end
+    end
    
    def dog_objects
      url = "https://bestfriends.org/adopt/adopt-our-sanctuary/dogs"
