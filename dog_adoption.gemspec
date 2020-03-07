@@ -9,9 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Cathrin Whitmer'"]
   spec.email         = ["'catwhitmer@gmail.com'"]
 
-  spec.summary       = %q{A gem that scrapes dogs available for adoption.}
-  spec.description   = %q{A gem that scrapes.}
-  spec.homepage      = "https://github.com/catwhitmer/dog_adoption."
+  spec.summary       = %q{A gem that scrapes dogs available for adoption form the Best Friends Animal Society webpage.}
+  spec.description   = %q{This CLI allows users to see all of the current dogs available for adoption at Best Friends Animal Society. It gives you a list of dogs and lets you see more information about each dog, includingname, age, description, and other useful information.}
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
