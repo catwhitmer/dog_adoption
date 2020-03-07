@@ -2,7 +2,7 @@
 class DogAdoption::CLI 
   
   def start 
-    puts "Welcome to Cat's Dog Adoption!".blue
+    puts "\nWelcome to Cat's Dog Adoption!".blue
     puts "\nFor a list of dogs available, type list."
     puts "To leave anytime, type exit."
     dog_menu
@@ -12,17 +12,16 @@ class DogAdoption::CLI
     input = nil 
     while input != "exit"
       input = gets.strip.downcase
-      case input
-        when "list"
+        if input == "list"
           dog_objects
           list_dogs
           choose_dog
-        when "exit"
-          puts "Goodbye".yellow
-     else 
-       puts "Whoof was that? Please type list or exit."
+        elsif input == "exit"
+          puts "Goodbye!".yellow
+        else 
+          puts "Whoof was that? Please type list or exit."
+        end
      end
-    end
    end
    
    def list_dogs
