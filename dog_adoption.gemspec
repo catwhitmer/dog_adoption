@@ -11,12 +11,13 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A gem that scrapes dogs available for adoption form the Best Friends Animal Society webpage.}
   spec.description   = %q{This CLI allows users to see all of the current dogs available for adoption at Best Friends Animal Society. It gives you a list of dogs and lets you see more information about each dog, includingname, age, description, and other useful information.}
+  spec.homepage      = "https://github.com/catwhitmer/dog_adoption."
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata["allowed_push_host"] = "https://github.com/catwhitmer/dog_adoption."
 
     spec.metadata["homepage_uri"] = spec.homepage
     spec.metadata["source_code_uri"] = "https://github.com/catwhitmer/dog_adoption."
