@@ -14,7 +14,8 @@ class DogAdoption::Scraper
     doc = Nokogiri::HTML(open(details.url))
     dog_description =  {
       :name => doc.css("h2.heading-2").text.strip,
-      :breed => doc.css("span.bold.black")[1].text.strip,
+      :breed => doc.css("span.bold.black")[0].text.strip,
+      :age => doc.css("span.bold.black")[1].text.strip,
       :size => doc.css("span.bold.black")[2].text.strip,
       :color => doc.css("span.bold.black")[3].text.strip,
       :gender => doc.css("span.bold.black")[4].text.strip,

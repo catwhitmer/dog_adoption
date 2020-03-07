@@ -1,43 +1,56 @@
-# DogAdoption
+Cat's Dog Adoption
+This CLI allows users to see all of the current dogs available for adoption at Best Friends Animal Society. Best Friends Animal Society is the nation's largest no kill animal sanctuary with locations in New York City, Salt Lake City,Atlanta, and Los Angeles. They are working on building effective programs that reduce the number of animals entering shelters.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dog_adoption`. To experiment with that code, run `bin/console` for an interactive prompt.
+Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-TODO: Delete this and the text above, and describe your gem
+Prerequisites
+What things you need to install the software and how to install them
 
-## Installation
+Give examples
+Installing
+A step by step series of examples that tell you how to get a development env running
 
-Add this line to your application's Gemfile:
+Say what the step will be
 
-```ruby
-gem 'dog_adoption'
-```
+Give the example
+And repeat
 
-And then execute:
+until finished
+End with an example of getting some data out of the system or using it for a little demo
 
-    $ bundle
+Running the tests
+Explain how to run the automated tests for this system
 
-Or install it yourself as:
+Break down into end to end tests
+Explain what these tests test and why
 
-    $ gem install dog_adoption
+Give an example
+And coding style tests
+Explain what these tests test and why
 
-## Usage
+Give an example
+Deployment
+Add additional notes about how to deploy this on a live system
 
-TODO: Write usage instructions here
+Built With
+Dropwizard - The web framework used
+Maven - Dependency Management
+ROME - Used to generate RSS Feeds
+Contributing
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Development
+Versioning
+We use SemVer for versioning. For the versions available, see the tags on this repository.
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Authors
+Billie Thompson - Initial work - PurpleBooth
+See also the list of contributors who participated in this project.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/'observant-lambda-5302'/dog_adoption. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the DogAdoption project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'observant-lambda-5302'/dog_adoption/blob/master/CODE_OF_CONDUCT.md).
+Acknowledgments
+Hat tip to anyone whose code was used
+Inspiration
+etc
