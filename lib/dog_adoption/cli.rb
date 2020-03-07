@@ -2,7 +2,7 @@
 class DogAdoption::CLI 
   
   def start 
-    puts "Welcome to Cat's Dog Adoption!"
+    puts "Welcome to Cat's Dog Adoption!".blue
     puts "\nFor a list of dogs available, type list."
     puts "To leave anytime, type exit."
     dog_menu
@@ -18,7 +18,7 @@ class DogAdoption::CLI
           list_dogs
           choose_dog
         when "exit"
-          puts "Goodbye"
+          puts "Goodbye".yellow
      else 
        puts "Whoof was that? Please type list or exit."
      end
@@ -27,12 +27,12 @@ class DogAdoption::CLI
    
    def list_dogs
      DogAdoption::Dogs.all.each.with_index(1) do |dog, index|
-         puts "#{index}. #{dog.name}"
+         puts "#{index}. #{dog.name}."
      end
    end
    
    def choose_dog
-     puts "\nPlease choose the number of the dog you would like more information about:"
+     puts "\nPlease choose the number of the dog you would like more information about:".yellow
      input = gets.strip.to_i
      max_length = DogAdoption::Dogs.all.length
      if input.between?(1, max_length)
@@ -53,7 +53,7 @@ class DogAdoption::CLI
    end
    
    def dog_menu_two
-     puts "\nIf you would like to see the list again, press list."
-     puts "To exit,type exit."
+     puts "\nIf you would like to see the list again, press list.".light_blue
+     puts "To exit,type exit.".light_blue
    end
 end
