@@ -1,8 +1,9 @@
 
 class DogAdoption::CLI 
   
+  
   def start 
-    puts "\nWelcome to Cat's Dog Adoption!".blue
+    puts "\nWelcome to Cat's Dog Adoption!".light_green.bold
     puts "\nFor a list of dogs available, type list."
     puts "To leave anytime, type exit."
     dog_menu
@@ -13,13 +14,18 @@ class DogAdoption::CLI
     while input != "exit"
       input = gets.strip.downcase
         if input == "list"
-          dog_objects
-          list_dogs
-          choose_dog
+          if DogAdoption::Dogs.all == []
+            dog_objects
+            list_dogs
+            choose_dog
+          else
+            list_dogs
+            choose_dog
+          end
         elsif input == "exit"
-          puts "Goodbye!".yellow
+          puts "Goodbye!".yellow.bold
         else 
-          puts "Whoof was that? Please type list or exit."
+          puts "Whoof was that? Please type list or exit.".red.bold
         end
      end
    end
@@ -31,7 +37,7 @@ class DogAdoption::CLI
    end
    
    def choose_dog
-     puts "\nPlease choose the number of the dog you would like more information about:".yellow
+     puts "\nPlease choose the number of the dog you would like more information about:".cyan.bold
      input = gets.strip.to_i
      max_length = DogAdoption::Dogs.all.length
      if input.between?(1, max_length)
@@ -43,7 +49,7 @@ class DogAdoption::CLI
    
    def dog_objects
      url = "https://bestfriends.org/adopt/adopt-our-sanctuary/dogs"
-        DogAdoption::Scraper.scrape_dogs(url)
+     DogAdoption::Scraper.scrape_dogs(url)
    end
    
    def dog_details(details)
@@ -52,7 +58,7 @@ class DogAdoption::CLI
    end
    
    def dog_menu_two
-     puts "\nIf you would like to see the list again, press list.".light_blue
-     puts "To exit,type exit.".light_blue
+     puts "\nIf you would like to see the list again, press list.".light_blue.bold
+     puts "To exit,type exit.".light_blue.bold
    end
 end
