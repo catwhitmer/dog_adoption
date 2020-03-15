@@ -18,11 +18,11 @@ class DogAdoption::Scraper
     detail = DogAdoption::Detail.new
     
     detail.name = dog_details.css("h2.heading-2").text.strip,
-    detail.breed = dog_details.css("span.bold.black").text.strip,
-    detail.age = dog_details.css("span.bold.black").text.strip,
-    detail.size = dog_details.css("span.bold.black").text.strip,
-    detail.color = dog_details.css("span.bold.black").text.strip,
-    detail.gender = dog_details.css("span.bold.black").text.strip,
+    detail.breed = dog_details.css("span.bold.black")[0].text.strip,
+    detail.age = dog_details.css("span.bold.black")[1].text.strip,
+    detail.size = dog_details.css("span.bold.black")[2].text.strip,
+    detail.color = dog_details.css("span.bold.black")[3].text.strip,
+    detail.gender = dog_details.css("span.bold.black")[4].text.strip,
     detail.description = dog_details.css("p.rescue-groups-pet-description").text.strip
     
     details.dog_description << detail

@@ -1,5 +1,5 @@
 class DogAdoption::Detail 
-  attr_reader :name, :breed, :age, :size, :color, :gender, :description, :details
+  attr_accessor :name, :breed, :age, :size, :color, :gender, :description, :details
   
   
   @@ll = []

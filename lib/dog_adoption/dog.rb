@@ -7,7 +7,7 @@ class DogAdoption::Dog
   def initialize(name,url)
     @name = name 
     @url = "https://bestfriends.org" + url 
-    @dog_description
+    @dog_description = []
     @@all << self 
   end
   
