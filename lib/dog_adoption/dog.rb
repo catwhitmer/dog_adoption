@@ -1,12 +1,13 @@
-class DogAdoption::Dogs 
-  attr_accessor :name, :dog_description, :url 
+class DogAdoption::Dog
+  attr_accessor :name, :url
+  attr_reader :dog_description
   
   @@all = []
   
   def initialize(name,url)
     @name = name 
-    @dog_description = []
     @url = "https://bestfriends.org" + url 
+    @dog_description
     @@all << self 
   end
   

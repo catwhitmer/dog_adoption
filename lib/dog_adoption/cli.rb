@@ -14,7 +14,7 @@ class DogAdoption::CLI
     while input != "exit"
       input = gets.strip.downcase
         if input == "list"
-          if DogAdoption::Dogs.all == []
+          if DogAdoption::Dog.all == []
             dog_objects
             list_dogs
             choose_dog
@@ -31,7 +31,7 @@ class DogAdoption::CLI
    end
    
    def list_dogs
-     DogAdoption::Dogs.all.each.with_index(1) do |dog, index|
+     DogAdoption::Dog.all.each.with_index(1) do |dog, index|
          puts "#{index}. #{dog.name}."
      end
    end
@@ -39,9 +39,9 @@ class DogAdoption::CLI
    def choose_dog
      puts "\nPlease choose the number of the dog you would like more information about:".cyan.bold
      input = gets.strip.to_i
-     max_length = DogAdoption::Dogs.all.length
+     max_length = DogAdoption::Dog.all.length
      if input.between?(1, max_length)
-       details = DogAdoption::Dogs.all[input-1]
+       details = DogAdoption::Dog.all[input-1]
       dog_details(details)
      end
      dog_menu_two
@@ -54,7 +54,7 @@ class DogAdoption::CLI
    
    def dog_details(details)
      DogAdoption::Scraper.scrape_dogs_details(details)
-     @dog_description
+     binding.pry
    end
    
    def dog_menu_two
