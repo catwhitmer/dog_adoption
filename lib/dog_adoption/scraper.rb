@@ -12,21 +12,20 @@ class DogAdoption::Scraper
   
   def self.scrape_dogs_details(details)
     doc = Nokogiri::HTML(open(details.url))
-    dog_description = doc.css("section.rescue-groups-pet-info-section")
-    dog_description.each do |dog_details|
-  
-    detail = DogAdoption::Detail.new
     
-    detail.name = dog_details.css("h2.heading-2").text.strip,
-    detail.breed = dog_details.css("span.bold.black")[0].text.strip,
-    detail.age = dog_details.css("span.bold.black")[1].text.strip,
-    detail.size = dog_details.css("span.bold.black")[2].text.strip,
-    detail.color = dog_details.css("span.bold.black")[3].text.strip,
-    detail.gender = dog_details.css("span.bold.black")[4].text.strip,
-    detail.description = dog_details.css("p.rescue-groups-pet-description").text.strip
+    detail =DogAdoption::Detail.new
+    
+    detail =  {
+      :name => doc.css("h2.heading-2").text.strip,
+      :breed => doc.css("span.bold.black")[0].text.strip,
+      :age => doc.css("span.bold.black")[1].text.strip,
+      :size => doc.css("span.bold.black")[2].text.strip,
+      :color => doc.css("span.bold.black")[3].text.strip,
+      :gender => doc.css("span.bold.black")[4].text.strip,
+      :description => doc.css("p.rescue-groups-pet-description").text.strip
+    }
     
     details.dog_description << detail
-
-  end 
- end
+    
+  end
 end

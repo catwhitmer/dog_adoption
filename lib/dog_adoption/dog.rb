@@ -1,3 +1,4 @@
+
 class DogAdoption::Dog
   attr_accessor :name, :url
   attr_reader :dog_description
