@@ -16,4 +16,8 @@ class DogAdoption::Dog
     @@all 
   end
   
+  def self.find_by_breed(breed)
+    
+  end
+  
 end
