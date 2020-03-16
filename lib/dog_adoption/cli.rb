@@ -52,12 +52,14 @@ class DogAdoption::CLI
      DogAdoption::Scraper.scrape_dogs(url)
    end
    
-   def dog_details(details)
-     DogAdoption::Scraper.scrape_dogs_details(details)
-      details.dog_description.each do |key, value|
-       puts "#{key}: #{value}"
-   end
-   binding.pry
+   def dog_details(dog)
+     DogAdoption::Scraper.scrape_dogs_details(dog)
+      puts "name: #{dog.name}"
+      puts "breed: #{dog.breed}"
+      puts "size: #{dog.size}"
+      puts "color: #{dog.color}"
+      puts "gender: #{dog.gender}"
+      puts "description: #{dog.description}"
    end
    
    def dog_menu_two

@@ -1,6 +1,6 @@
 
 class DogAdoption::Dog
-  attr_accessor :name, :url
+  attr_accessor :name, :url, :breed, :age, :size, :color, :gender, :description, :details
   attr_reader :dog_description
   
   @@all = []
