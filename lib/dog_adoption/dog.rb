@@ -17,7 +17,7 @@ class DogAdoption::Dog
   end
   
   def self.find_by_breed(breed)
-    
+    @@ll.detect {|dog| dog.breed == breed}
   end
   
 end
