@@ -42,7 +42,7 @@ class DogAdoption::CLI
      max_length = DogAdoption::Dog.all.length
      if input.between?(1, max_length)
        details = DogAdoption::Dog.all[input-1]
-       dog_details(details)
+        dog_details(details)
      end
      dog_menu_two
     end
@@ -60,8 +60,6 @@ class DogAdoption::CLI
       puts "color: #{dog.color}"
       puts "gender: #{dog.gender}"
       puts "description: #{dog.description}"
-    else
-    end
    end
    
    def dog_menu_two
