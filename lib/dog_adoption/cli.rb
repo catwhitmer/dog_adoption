@@ -10,11 +10,9 @@ class DogAdoption::CLI
   end
   
   def dog_menu 
-    input = nil 
-    while input != "exit"
       input = gets.strip.downcase
         if input == "list"
-          if DogAdoption::Dog.all == []
+          if DogAdoption::Dog.all == [] 
             dog_objects
             list_dogs
             choose_dog
@@ -26,8 +24,8 @@ class DogAdoption::CLI
           puts "Goodbye!".yellow.bold
         else 
           puts "Whoof was that? Please type list or exit.".red.bold
+          dog_menu
         end
-     end
    end
    
    def list_dogs
@@ -65,5 +63,6 @@ class DogAdoption::CLI
    def dog_menu_two
      puts "\nIf you would like to see the list again, press list.".light_blue.bold
      puts "To exit,type exit.".light_blue.bold
+     dog_menu
    end
 end
