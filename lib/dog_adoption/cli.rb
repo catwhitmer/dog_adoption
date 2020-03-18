@@ -41,8 +41,8 @@ class DogAdoption::CLI
      input = gets.strip.to_i
      max_length = DogAdoption::Dog.all.length
      if input.between?(1, max_length)
-       details = DogAdoption::Dog.all[input-1]
-       dog_details(details)
+       dog = DogAdoption::Dog.all[input-1]
+       dog_details(dog) 
      end
      dog_menu_two
     end
