@@ -15,7 +15,18 @@ class DogAdoption::Dog
   end
   
   def self.find_by_breed(breed)
-    @@ll.detect {|dog| dog.breed == breed}
+    @@all.detect {|dog| dog.breed == breed}
   end
   
+  def get_details
+    if self.description.nil?
+       DogAdoption::Scraper.scrape_dogs_details(self)
+     end
+   end
+   
+   def self.all_details
+     self.all.each do |dog|
+       dog.get_details
+     end
+   end
 end

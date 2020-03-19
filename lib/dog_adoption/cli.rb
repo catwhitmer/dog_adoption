@@ -1,4 +1,3 @@
-
 class DogAdoption::CLI 
   
   
@@ -32,6 +31,7 @@ class DogAdoption::CLI
      DogAdoption::Dog.all.each.with_index(1) do |dog, index|
          puts "#{index}. #{dog.name}."
      end
+     binding.pry
    end
    
    def choose_dog
@@ -51,7 +51,7 @@ class DogAdoption::CLI
    end
    
    def dog_details(dog)
-     DogAdoption::Scraper.scrape_dogs_details(dog)
+     dog.get_details
       puts "name: #{dog.name}"
       puts "breed: #{dog.breed}"
       puts "size: #{dog.size}"
